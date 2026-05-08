@@ -329,6 +329,35 @@ function endQ(){document.getElementById('qopts').innerHTML='';document.getElemen
 startQuiz();
 
 // ══ CONTACT ══
+// ── CV Download (opens PDF directly; works even without file on same server) ──
+function downloadCV(){
+  // Try to open the embedded PDF from user upload location
+  const paths=['./Mudasircv.pdf','Mudasircv.pdf'];
+  // Create a temporary link and try fetch
+  fetch('./Mudasircv.pdf',{method:'HEAD'})
+    .then(r=>{
+      if(r.ok){
+        const a=document.createElement('a');
+        a.href='./Mudasircv.pdf';a.download='Mudasir_Hussain_CV.pdf';
+        document.body.appendChild(a);a.click();document.body.removeChild(a);
+      } else {
+        // Fallback: open mailto with CV request message
+        window.location.href='mailto:hussainmudasir098@gmail.com?subject=CV Request&body=Hi Mudasir, please send me your CV. Thank you!';
+        showCVNote();
+      }
+    })
+    .catch(()=>{
+      window.location.href='mailto:hussainmudasir098@gmail.com?subject=CV Request&body=Hi Mudasir, please send me your CV. Thank you!';
+      showCVNote();
+    });
+}
+function showCVNote(){
+  const note=document.createElement('div');
+  note.style.cssText='position:fixed;bottom:6rem;left:50%;transform:translateX(-50%);background:var(--amber);color:#04060f;padding:0.75rem 1.5rem;border-radius:10px;font-size:0.82rem;font-weight:700;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,0.3)';
+  note.textContent='📧 CV request sent to email! Mudasir will reply shortly.';
+  document.body.appendChild(note);setTimeout(()=>note.remove(),4000);
+}
+
 function sendViaEmail(e){
   e.preventDefault();
   const name=document.getElementById('fn').value.trim();
