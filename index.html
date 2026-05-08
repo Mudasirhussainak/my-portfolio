@@ -208,6 +208,46 @@
     <div class="stag">03 — Projects</div>
     <h2 class="stitle">My <em>Work</em></h2>
     <div class="pg reveal">
+         <!-- ✦ FEATURED PROJECT ✦ -->
+      <div class="pc featured-project" style="grid-column:1/-1;">
+        <div class="featured-ribbon">⭐ Featured Project</div>
+        <div class="ptop" style="margin-bottom:0.75rem">
+          <span class="ptag" style="color:#a78bfa;background:rgba(167,139,250,0.12);border:1px solid rgba(167,139,250,0.3);font-size:0.72rem;padding:4px 14px;border-radius:20px;letter-spacing:0.1em">🏥 Full-Stack Platform</span>
+          <a href="https://kahmiri-medican.onrender.com" target="_blank" rel="noopener" class="proj-live-btn">🌐 Live Demo ↗</a>
+        </div>
+        <div class="pttl" style="font-size:1.25rem;margin-bottom:0.6rem">Kashmiri Medican — Pharmacy Management System</div>
+        <p class="pdsc" style="max-width:900px;font-size:0.82rem;line-height:1.85;margin-bottom:1rem">
+          A comprehensive, full-stack pharmaceutical management platform designed to digitize medical inventory and streamline the medicine procurement process. The application bridges the gap between traditional medicine shops ("Dawakhana") and modern digital healthcare, providing a robust backend for administrative control and a seamless frontend for service accessibility.
+        </p>
+        <div class="dawakhana-features">
+          <div class="dw-feat">
+            <div class="dw-feat-icon">🗄️</div>
+            <div>
+              <div class="dw-feat-title">ORM & Database Design</div>
+              <div class="dw-feat-desc">Leveraged Django's ORM to design a relational database managing medicines, stock levels, suppliers, and sales transactions — without manual SQL.</div>
+            </div>
+          </div>
+          <div class="dw-feat">
+            <div class="dw-feat-icon">🔐</div>
+            <div>
+              <div class="dw-feat-title">Secure Authentication</div>
+              <div class="dw-feat-desc">Integrated Django's built-in auth with custom user roles (Admin for inventory, Staff for sales) to ensure data integrity and security.</div>
+            </div>
+          </div>
+          <div class="dw-feat">
+            <div class="dw-feat-icon">🧩</div>
+            <div>
+              <div class="dw-feat-title">Modular App Structure</div>
+              <div class="dw-feat-desc">Organized into independent Django apps (inventory, sales, users) for high maintainability, scalability, and clean separation of concerns.</div>
+            </div>
+          </div>
+        </div>
+        <div class="pstk" style="margin-top:1rem">
+          <span class="stk">Django</span><span class="stk">Python</span><span class="stk">ORM</span>
+          <span class="stk">MySQL</span><span class="stk">REST APIs</span><span class="stk">HTML/CSS</span>
+          <span class="stk">Bootstrap</span><span class="stk">Render.com</span>
+        </div>
+      </div>
       <div class="pc"><div class="ptop"><span class="ptag tw">Web App</span><span class="pico">🏗️</span></div><div class="pttl">Student Portfolio CMS</div><p class="pdsc">Django-based CMS for students. Full admin panel with auth, SQL/MySQL database, and REST API endpoints.</p><div class="pstk"><span class="stk">Django</span><span class="stk">SQL/MySQL</span><span class="stk">Bootstrap</span></div></div>
       <div class="pc"><div class="ptop"><span class="ptag tdg">Data Science</span><span class="pico">📈</span></div><div class="pttl">Grade Predictor</div><p class="pdsc">ML model predicting student performance using study hours, attendance, and past grades with scikit-learn.</p><div class="pstk"><span class="stk">Python</span><span class="stk">NumPy</span><span class="stk">Pandas</span></div></div>
       <div class="pc"><div class="ptop"><span class="ptag tw">REST API</span><span class="pico">🔗</span></div><div class="pttl">Quiz Platform API</div><p class="pdsc">Full-stack quiz app with JWT auth, timed tests, leaderboards, and analytics using Django REST Framework.</p><div class="pstk"><span class="stk">Django REST</span><span class="stk">JWT</span><span class="stk">MySQL</span></div></div>
@@ -356,9 +396,11 @@
       <div class="cv-sec" style="margin-bottom:0">
         <div class="cv-lbl">Hobbies</div>
         <div class="cv-info">🏏 Cricket · 💻 Learning new tech · 🎮 Online gaming</div>
-      </div>
+      </div>   
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
-        <a href="Mudasircv.pdf" download="Mudasir_Hussain_CV.pdf" class="btn btn-sky">⬇ Download CV</a>
+        <button class="btn btn-sky" onclick="downloadCV()">⬇ Download CV</button>
+        <a href="mailto:hussainmudasir098@gmail.com" class="btn btn-ghost">✉ Email Me</a>
+      </div>
         <a href="mailto:hussainmudasir098@gmail.com" class="btn btn-ghost">✉ Email Me</a>
       </div>
     </div>
@@ -399,3 +441,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
