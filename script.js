@@ -338,7 +338,7 @@ function downloadCV(){
     .then(r=>{
       if(r.ok){
         const a=document.createElement('a');
-        a.href='./Mudasircv.pdf';a.download='Mudasir_Hussain_CV.pdf';
+        a.href='./Mudasircv.pdf';a.download='Mudasir_Hussain_Resume_Final_Links.pdf';
         document.body.appendChild(a);a.click();document.body.removeChild(a);
       } else {
         // Fallback: open mailto with CV request message
